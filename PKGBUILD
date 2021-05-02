@@ -29,7 +29,7 @@ pkgver() {
 
 package() {
   cd $pkgname/target/release
-  install -Dm755 leftwm leftwm-worker leftwm-state -t "$pkgdir"/usr/bin
+  install -Dm755 leftwm leftwm-check leftwm-worker leftwm-state -t "$pkgdir"/usr/bin
 
   install -d "$pkgdir"/usr/share/leftwm
   cp -R "$srcdir"/$pkgname/themes "$pkgdir"/usr/share/leftwm
